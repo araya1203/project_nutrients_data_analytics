@@ -38,7 +38,8 @@
 
 <div align="center">
 
-![image](https://github.com/araya1203/project_nutrients_data_analytics/assets/132973456/5a3b0b6b-1def-44d4-8a1e-309c1e7ee27e)
+![image](https://github.com/araya1203/project_nutrients_data_analytics/assets/132973456/380199ea-19da-4475-ab88-a257b49d9d20)
+
 
 </div>
 
@@ -62,12 +63,14 @@
 ## 🐾 인사이트 도출
 <details>
 <summary> 콜레스테롤 영양제 긍정적 리뷰 분석</summary>
+![image](https://github.com/araya1203/project_nutrients_data_analytics/assets/132973456/b8eea9af-410f-43e3-9d43-c9d9f8b43fe0)
 
 </details>
 
 
 <details>
 <summary> 콜레스테롤 영양제 부정적 리뷰 분석</summary>
+![image](https://github.com/araya1203/project_nutrients_data_analytics/assets/132973456/37a80317-b1a6-444c-94e0-362a637b4ff8)
 
 </details>
 
