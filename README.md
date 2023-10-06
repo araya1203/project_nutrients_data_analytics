@@ -35,6 +35,7 @@
 ## 🐾 LDA 최적의 토픽 및 모델링 결과
 
 ### ❗ LDA 최적의 토픽 갯수
+![image](https://github.com/araya1203/project_nutrients_data_analytics/assets/132973456/6d72db82-f285-4cb4-aa2c-d64e47238fc6)
 
 
 ### ❗ LDA 토픽 모델링 결과
