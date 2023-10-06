@@ -50,13 +50,17 @@
 
 ### ❗ LDA positive 토픽 모델링 결과
 
+
 <div align="center">
+  
     ![image](https://github.com/araya1203/project_nutrients_data_analytics/assets/132973456/260bd80d-7786-4a7c-90d6-632af857937b)
     겹치는 토픽이 없는 최적의 토픽 갯수 (3)
 
 </div>    
 
+
 ### ❗ LDA negative 토픽 모델링 결과
+
 
 <div align="center">
   
