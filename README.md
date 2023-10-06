@@ -38,7 +38,7 @@
 
 <div align="center">
 ![image](https://github.com/araya1203/project_nutrients_data_analytics/assets/132973456/6d72db82-f285-4cb4-aa2c-d64e47238fc6)
-<div>
+</div>
 
 ### ❗ LDA 토픽 모델링 결과
 
@@ -53,7 +53,7 @@
   * <긍정>
     ![image](https://github.com/araya1203/project_nutrients_data_analytics/assets/132973456/260bd80d-7786-4a7c-90d6-632af857937b)
                          `                        겹치는 토픽이 없는 최적의 토픽 갯수 (3)
-<div>
+</div>
 
 ## 🐾 인사이트 도출
 <details>
