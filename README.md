@@ -52,7 +52,6 @@
   
 <부정 토픽 모델링 시각화>
     ![image](https://github.com/araya1203/project_nutrients_data_analytics/assets/132973456/a095dacf-6be3-4816-ab4c-2f788bc462e7)
-
     겹치는 토픽이 없는 최적의 토픽 갯수 (4)
 
 
