@@ -34,7 +34,7 @@
 
 ## 🐾 LDA 최적의 토픽 및 모델링 결과
 
-### ❗ LDA 최적의 토픽 갯수
+### ❗ LDA 최적의 토픽 갯수 (일관성 점수 높고, 혼잡도 낮은 토픽)
 
 <div align="center">
 
@@ -57,7 +57,7 @@
 
 <긍정 토픽 모델링 시각화>
     ![image](https://github.com/araya1203/project_nutrients_data_analytics/assets/132973456/260bd80d-7786-4a7c-90d6-632af857937b)
-                         `                        겹치는 토픽이 없는 최적의 토픽 갯수 (3)
+                                                  겹치는 토픽이 없는 최적의 토픽 갯수 (3)
 </div>
 
 
