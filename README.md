@@ -37,6 +37,12 @@
 ### ❗ LDA 최적의 토픽 갯수
 긍정, 부정 시각화 삽입하기<<
 
+### ❗ LDA 토픽 모델링 결과
+  * pyLDAvis 패키지를 활용하여 LDA 토픽 모델링 결과 시각화
+  * 긍정적 리뷰와 부정적 리뷰에서 각각 토픽 10개씩 추출
+![image](https://github.com/araya1203/project_nutrients_data_analytics/assets/132973456/6218bb74-0424-4cb6-a82b-f06eb2d7c0ae)
+                                      겹치는 토픽이 없는 최적의 토픽 갯수
+
 
 ## 🐾 인사이트 도출
 <details>
