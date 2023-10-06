@@ -38,7 +38,8 @@
 
 <div align="center">
 
-![image](https://github.com/araya1203/project_nutrients_data_analytics/assets/132973456/e1aceeed-6376-4bf6-823f-002dca3e92ff)
+![image](https://github.com/araya1203/project_nutrients_data_analytics/assets/132973456/7339dcee-eeeb-475e-8d13-9c544bf49332)
+
 
 
 
