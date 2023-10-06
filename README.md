@@ -38,8 +38,8 @@
 
 <div align="center">
 
-![image](https://github.com/araya1203/project_nutrients_data_analytics/assets/132973456/9c044d7b-fe93-4858-8f1c-22ad202859de)
-negative 최적의 토픽 갯수
+![image](https://github.com/araya1203/project_nutrients_data_analytics/assets/132973456/5a3b0b6b-1def-44d4-8a1e-309c1e7ee27e)
+
 </div>
 
 ### ❗ LDA 토픽 모델링 결과
