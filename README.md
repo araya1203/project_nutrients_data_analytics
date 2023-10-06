@@ -49,13 +49,13 @@
   * 긍정적 리뷰와 부정적 리뷰에서 각각 토픽 10개씩 추출
 <div align="center">
   
-  * <부정>
-    
-    ![image](https://github.com/araya1203/project_nutrients_data_analytics/assets/132973456/6218bb74-0424-4cb6-a82b-f06eb2d7c0ae)
+  #### <부정 토픽 모델링 시각화>
+    ![image](https://github.com/araya1203/project_nutrients_data_analytics/assets/132973456/a095dacf-6be3-4816-ab4c-2f788bc462e7)
+
                                                   겹치는 토픽이 없는 최적의 토픽 갯수 (3)
 
 
-  * <긍정>
+  #### <긍정 토픽 모델링 시각화>
     ![image](https://github.com/araya1203/project_nutrients_data_analytics/assets/132973456/260bd80d-7786-4a7c-90d6-632af857937b)
                          `                        겹치는 토픽이 없는 최적의 토픽 갯수 (3)
 </div>
