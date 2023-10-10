@@ -13,51 +13,91 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
+# @app.get("/")
+# async def root():
+#     return {"message": "Hello World"}
 
 import pickle
-
+import pandas as pd
 # /api_v1/mlmodelwithregression with dict params
 # method : post
-
-@app.post('/api_v1/mlmodelwithregression') 
+review_content = "" 
+@app.post('/review_prediction') 
 def mlmodelwithregression(data:dict) : 
     print('data with dict {}'.format(data))
     # data dict to 변수 활당
     review_content = data['review_content'] ## str로 입력되면 변환 안해도 될듯?
-    # 입원기간 = float(data['입원기간'])
-    # 통증기간 = float(data['통증기간(월)'])
+   
 
-## 전처리 pkl 불러오기
- # 전처리 형태소 분석 pkl
-    with open('datasets/tokenized_reviews.pkl', 'rb') as preprocess_token: 
-        token_loaded_scaler = pickle.load(preprocess_token)
-        token_input_scaler = ['review_content']
-        token_input_features = token_loaded_scaler.fit_transform(token_input_scaler)
-        ### input : reveiw_content ⇒ output : tokenized_reviews
+    # ## 전처리 pkl 불러오기
+    from konlpy.tag import Okt
+    from collections import Counter
 
- # 전처리 불용어처리 pkl
-    with open('datasets/replaced_review.pkl', 'rb') as preprocess_stopword: 
-        replaced_loaded_scaler = pickle.load(preprocess_stopword)
-        replaced_input_scaler = ['tokenized_reviews']
-        replaced_input_features = replaced_loaded_scaler.fit_transform(replaced_input_scaler)
-        #### input : tokenized_reviews ⇒ output : replaced_review
+    # Okt 형태소 분석기 인스턴스 생성
+    okt = Okt()
 
+    # 필요한 품사 리스트 정의
+    desired_pos = ['Noun', 'Verb', 'Adjective', 'Adverb', 'Exclamation', 'Conjunction']
+
+    # 형태소 분석 결과를 담을 리스트 초기화
+    tokenized_reviews = []
+
+    for review_text in review_content:
+        try:
+            # 형태소 분석 수행
+            pos_result = okt.pos(review_text, norm=True, stem=True)
+            
+            # 필요한 조건을 만족하는 단어 선택
+            filtered_tokens = []
+            for word, pos in pos_result:
+                if pos in desired_pos and len(word) > 1:
+                    filtered_tokens.append(word)
+                        
+            tokenized_reviews.append(filtered_tokens)  # 각 토큰을 개별 항목으로 유지
+            # 각 토큰을 한 문장으로 합치기
+            # tokenized_sentence = ' '.join(filtered_tokens)
+            # tokenized_reviews.append(tokenized_sentence)
+        except:
+            pass
+   
+# ## 전처리 불용어 사전 pkl 불러오기
+#     with open('gatheringdatas/datasets/stopword.pkl', 'rb') as stopword: 
+#         stopword_list = pickle.load(stopword)
+    
+# # 불용어 처리 함수 정의
+#     def stopword(tokens):
+#         removed_tokens = [word for word in tokens if word not in stopword_list]
+#         return removed_tokens
+  
+
+    
+    # 불용어 처리 적용
+    replaced_review = [' '.join(tokens) for tokens in tokenized_reviews]
+
+    from mecab import MeCab
+    mecab = MeCab()
+
+    tokenized_comments = list()
+    for comment in replaced_review :
+        comment_morphs = mecab.morphs(comment)
+        # print(' '.join(comment_morphs))
+        # 추가로 불용어 처리 필요
+        tokenized_comments.append(' '.join(comment_morphs))
 
 ## machinelearning _ 진행 column['replaced_review']
  # 전처리 _ tfidfVectorization
-    with open('datasets/tfidfVectorizer.pkl', 'rb') as tvector: 
+    with open('gatheringdatas/datasets/tfidfVectorizer.pkl', 'rb') as tvector: 
         loaded_scaler = pickle.load(tvector)
-        input_scaler = ['replaced_review']
-        input_features = loaded_scaler.fit_transform(input_scaler)
+        input_scaler = tokenized_comments
+        input_features = loaded_scaler.transform(input_scaler)
 
     result_predict = 0;
  # final _ SVC 예측 
-    with open('datasets/sentiment_analyze_mechinelearning.pkl', 'rb') as predict_SVC: 
+    with open('gatheringdatas/datasets/sentiment_analyze_mechinelearning.pkl', 'rb') as predict_SVC: 
         loaded_model = pickle.load(predict_SVC)
-        result_predict = loaded_model.predict(input_features)
+        input_features_dense = input_features.toarray()
+        result_predict = loaded_model.predict(input_features_dense)
+        
         
         print('review reponse : {}'.format(result_predict))
         pass
@@ -66,7 +106,7 @@ def mlmodelwithregression(data:dict) :
         # # 예측값 리턴
         # result = int({'Location_of_herniation':result_predict[0]})
         # return result
-        result = {'review reponse' : result_predict}
+        result = {'review_reponse' : result_predict}
         return result
 
 
