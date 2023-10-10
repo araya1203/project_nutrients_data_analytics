@@ -39,26 +39,14 @@ def mlmodelwithregression(data:dict) :
     # 필요한 품사 리스트 정의
     desired_pos = ['Noun', 'Verb', 'Adjective', 'Adverb', 'Exclamation', 'Conjunction']
 
-    # 형태소 분석 결과를 담을 리스트 초기화
-    tokenized_reviews = []
+    
 
-    for review_text in review_content:
-        try:
-            # 형태소 분석 수행
-            pos_result = okt.pos(review_text, norm=True, stem=True)
-            
-            # 필요한 조건을 만족하는 단어 선택
-            filtered_tokens = []
-            for word, pos in pos_result:
-                if pos in desired_pos and len(word) > 1:
-                    filtered_tokens.append(word)
-                        
-            tokenized_reviews.append(filtered_tokens)  # 각 토큰을 개별 항목으로 유지
-            # 각 토큰을 한 문장으로 합치기
-            # tokenized_sentence = ' '.join(filtered_tokens)
-            # tokenized_reviews.append(tokenized_sentence)
-        except:
-            pass
+    # 형태소 분석 수행
+    pos_result = okt.pos(review_content, norm=True, stem=True)
+
+    # 필요한 조건을 만족하는 단어 선택하고 공백으로 연결
+    filtered_sentence = ' '.join(word for word, pos in pos_result if pos in desired_pos and len(word) > 1)
+
    
 # ## 전처리 불용어 사전 pkl 불러오기
 #     with open('gatheringdatas/datasets/stopword.pkl', 'rb') as stopword: 
@@ -71,25 +59,27 @@ def mlmodelwithregression(data:dict) :
   
 
     
-    # 불용어 처리 적용
-    replaced_review = [' '.join(tokens) for tokens in tokenized_reviews]
+    # # 불용어 처리 적용
+    # replaced_review = [' '.join(tokens) for tokens in filtered_tokens]
 
     from mecab import MeCab
     mecab = MeCab()
 
-    tokenized_comments = list()
-    for comment in replaced_review :
-        comment_morphs = mecab.morphs(comment)
-        # print(' '.join(comment_morphs))
-        # 추가로 불용어 처리 필요
-        tokenized_comments.append(' '.join(comment_morphs))
+    
+
+    comment_morphs = mecab.morphs(filtered_sentence)
+    pass
+    # print(' '.join(comment_morphs))
+    # 추가로 불용어 처리 필요
+    tokenized_comments=' '.join(comment_morphs)
 
 ## machinelearning _ 진행 column['replaced_review']
- # 전처리 _ tfidfVectorization
+ # 전처리 _ tfidfVectorization _이게 지금 문자열 배열로 들어가있단말이지? 이걸 
     with open('gatheringdatas/datasets/tfidfVectorizer.pkl', 'rb') as tvector: 
         loaded_scaler = pickle.load(tvector)
         input_scaler = tokenized_comments
-        input_features = loaded_scaler.transform(input_scaler)
+        input_features = loaded_scaler.transform([input_scaler])
+        
 
     result_predict = 0;
  # final _ SVC 예측 
@@ -106,7 +96,7 @@ def mlmodelwithregression(data:dict) :
         # # 예측값 리턴
         # result = int({'Location_of_herniation':result_predict[0]})
         # return result
-        result = {'review_reponse' : result_predict}
+        result = {'review_reponse' : result_predict[0]}
         return result
 
 
