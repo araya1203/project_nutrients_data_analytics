@@ -77,7 +77,7 @@
 
 ## 🐾 인사이트 도출
 <details>
-<summary>  영양제 긍정적 리뷰 분석</summary>
+ <summary style="font-weight: bold;"> 영양제 긍정적 리뷰 분석</summary>
   
 ![image](https://github.com/araya1203/project_nutrients_data_analytics/assets/132973456/b8eea9af-410f-43e3-9d43-c9d9f8b43fe0)
 
@@ -100,7 +100,7 @@
 
 
 <details>
-<summary> 영양제 부정적 리뷰 분석</summary>
+<summary style="font-weight: bold;">영양제 부정적 리뷰 분석</summary>
   
 ![image](https://github.com/araya1203/project_nutrients_data_analytics/assets/132973456/37a80317-b1a6-444c-94e0-362a637b4ff8)
 
