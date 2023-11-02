@@ -18,8 +18,8 @@
             <!-- Texture Mean Input -->
     
             <div class="mb-3">
-                <label for="perimeterMeanInput" class="form-label">상품후기</label>
-                <input type="text" class="form-control" id="perimeterMeanInput" name="review_content" required>
+                <label for="ReviewContent" class="form-label">상품후기</label>
+                <input type="text" class="form-control" id="ReviewContent" name="review_content" required>
             </div>
 
             <!-- Submit Button -->
@@ -36,7 +36,7 @@
  let predictObject = document.querySelector('#predict')
  predictObject.addEventListener('click', (event)=>{
     event.preventDefault();  // submit 정지
-    let perimeter_mean = document.querySelector('#perimeterMeanInput').value;
+    let review_content = document.querySelector('#ReviewContent').value;
 
     let request_dict = {"review_content":review_content};
 
