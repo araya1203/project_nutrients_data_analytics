@@ -1,12 +1,14 @@
 
 ## 🐾 프로젝트 기간 
-    2차 : 2023년 9월 ~ 2023년 10월
+2차 : 2023년 9월 ~ 2023년 10월
 
 ## 🐾 STACKS
+<div align=center> 
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white">
 <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
-<img src="https://img.shields.io/badge/mariaDB-003545?style=for-the-badge&logo=mariaDB&logoColor=white">
+<img src="https://img.shields.io/badge/mongoDB-47A248?style=for-the-badge&logo=MongoDB&logoColor=white">
 <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">  
+</div>
 
 ## 🐾 프로젝트 설명
 
@@ -44,8 +46,7 @@
 
 
 ## 🐾 LDA 최적의 토픽 및 모델링 결과
-* pyLDAvis 패키지를 활용하여 LDA 토픽 모델링 결과 시각화
-
+- pyLDAvis 패키지를 활용하여 LDA 토픽 모델링 결과 시각화
 
 
 ### ❗ LDA 최적의 토픽 갯수 (일관성 점수 높고, 혼잡도 점수 낮은 토픽)
@@ -91,16 +92,16 @@
 
 
 ##### 빠른 배송과 품질 강조:
-"빨르다" 및 "뛰어나다"와 같은 단어는 고객이 빠른 배송 및 제품의 품질을 강조하는 경향이 있음. 홈페이지에서 빠른 배송 및 제품 품질에 대한 정보를 강조하고 신뢰성을 강조할 수 있음.
+- "빨르다" 및 "뛰어나다"와 같은 단어는 고객이 빠른 배송 및 제품의 품질을 강조하는 경향이 있음. 홈페이지에서 빠른 배송 및 제품 품질에 대한 정보를 강조하고 신뢰성을 강조할 수 있음.
 
 ##### 비타민 및 건강 관련 정보 제공:
-"비타민"과 "건강"과 같은 단어는 고객이 건강과 관련된 제품을 찾고 있음을 나타냄. 홈페이지에서 비타민 제품 및 건강 관련 정보를 제공하고 이점을 강조할 수 있음. 
+- "비타민"과 "건강"과 같은 단어는 고객이 건강과 관련된 제품을 찾고 있음을 나타냄. 홈페이지에서 비타민 제품 및 건강 관련 정보를 제공하고 이점을 강조할 수 있음. 
 
 ##### 고객 리뷰 및 추천 강조:
-"좋다"와 "뛰어나다"와 같은 단어는 이러한 리뷰 및 고객의 추천을 강조하여 다른 고객에게 자신의 제품을 추천할 수 있는 방법을 제공
+- "좋다"와 "뛰어나다"와 같은 단어는 이러한 리뷰 및 고객의 추천을 강조하여 다른 고객에게 자신의 제품을 추천할 수 있는 방법을 제공
 
 ##### 구매 및 복용 안내 강화:
-"제품"과 "복용"과 같은 단어는 제품의 구매 및 복용에 대한 관심을 나타낼 수 있음 홈페이지에서 제품의 구매 프로세스 및 복용 방법을 명확하게 안내하고 사용자 경험을 개선하는 것이 중요함. 
+- "제품"과 "복용"과 같은 단어는 제품의 구매 및 복용에 대한 관심을 나타낼 수 있음 홈페이지에서 제품의 구매 프로세스 및 복용 방법을 명확하게 안내하고 사용자 경험을 개선하는 것이 중요함. 
 
 
 
