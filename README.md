@@ -1,8 +1,19 @@
+
+## 🐾 프로젝트 기간 
+    2차 : 2023년 9월 ~ 2023년 10월
+
+## 🐾 STACKS
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white">
+<img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
+<img src="https://img.shields.io/badge/mariaDB-003545?style=for-the-badge&logo=mariaDB&logoColor=white">
+<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">  
+
 ## 🐾 프로젝트 설명
 
 - 영양제 추천 홈페이지를 위해 11번가와 쿠팡의 기능별 영양제 리뷰 데이터를 수집하고, 별점을 기준으로 긍정과 부정으로 나눕니다.
   이후 데이터를 분석하여 긍정/부정 댓글을 판단하는 머신러닝 모델을 훈련하고, 긍정 댓글이 많은 영양제를 추천 리스트로 제공합니다.
   이 프로젝트는 영양제 선택을 돕는 서비스를 구현하는데 중점을 두고 있습니다.
+
 
 <details>
 <summary> 데이터 분석 과정 </summary>
@@ -42,11 +53,6 @@
 <div align="center">
 
 ![image](https://github.com/araya1203/project_nutrients_data_analytics/assets/132973456/7339dcee-eeeb-475e-8d13-9c544bf49332)
-
-
-
-
-
 
 </div>
 
